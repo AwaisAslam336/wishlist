@@ -3,7 +3,7 @@
 client_id = "4257fdbd29cd1d7347bd9f2ec61b270e"
 name = "wishlist"
 handle = "wishlist-549"
-application_url = "https://assignment-brandon-craft-launch.trycloudflare.com"
+application_url = "https://tested-noon-header-responses.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://assignment-brandon-craft-launch.trycloudflare.com/auth/callback",
-  "https://assignment-brandon-craft-launch.trycloudflare.com/auth/shopify/callback",
-  "https://assignment-brandon-craft-launch.trycloudflare.com/api/auth/callback"
+  "https://tested-noon-header-responses.trycloudflare.com/auth/callback",
+  "https://tested-noon-header-responses.trycloudflare.com/auth/shopify/callback",
+  "https://tested-noon-header-responses.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

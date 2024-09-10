@@ -12,19 +12,32 @@ import { TitleBar } from "@shopify/app-bridge-react";
 import { useState } from "react";
 import { json } from "@remix-run/node";
 import { Form, useLoaderData } from "@remix-run/react";
+import db from "../db.server";
 
 export const loader = async ({ request }) => {
-  let settings = { name: "Wishlist", description: "A wishlist app" };
+  let settings = await db.Settings.findFirst();
   return json(settings);
 };
 
 export const action = async ({ request }) => {
   const formData = await request.formData();
-  console.log(formData, "form data");
-  let settings = {
-    name: formData.get("name"),
-    description: formData.get("description"),
-  };
+
+  let settings = await db.Settings.upsert({
+    where: {
+      id: "1",
+    },
+    update: {
+      id: "1",
+      name: formData.get("name"),
+      description: formData.get("description"),
+    },
+    create: {
+      id: "1",
+      name: formData.get("name"),
+      description: formData.get("description"),
+    },
+  });
+
   return json(settings);
 };
 
@@ -53,13 +66,13 @@ export default function SettingsPage() {
                 <TextField
                   label="App Name"
                   name="name"
-                  value={appInfo.name}
+                  value={appInfo?.name}
                   onChange={(value) => setAppInfo({ ...appInfo, name: value })}
                 />
                 <TextField
                   label="Description"
                   name="description"
-                  value={appInfo.description}
+                  value={appInfo?.description}
                   onChange={(value) =>
                     setAppInfo({ ...appInfo, description: value })
                   }
