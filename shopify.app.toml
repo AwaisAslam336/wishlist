@@ -3,7 +3,7 @@
 client_id = "4257fdbd29cd1d7347bd9f2ec61b270e"
 name = "wishlist"
 handle = "wishlist-549"
-application_url = "https://virginia-queensland-alcohol-stupid.trycloudflare.com"
+application_url = "https://attorney-conclude-advertiser-tucson.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://virginia-queensland-alcohol-stupid.trycloudflare.com/auth/callback",
-  "https://virginia-queensland-alcohol-stupid.trycloudflare.com/auth/shopify/callback",
-  "https://virginia-queensland-alcohol-stupid.trycloudflare.com/api/auth/callback"
+  "https://attorney-conclude-advertiser-tucson.trycloudflare.com/auth/callback",
+  "https://attorney-conclude-advertiser-tucson.trycloudflare.com/auth/shopify/callback",
+  "https://attorney-conclude-advertiser-tucson.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
